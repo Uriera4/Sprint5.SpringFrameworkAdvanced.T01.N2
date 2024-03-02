@@ -40,6 +40,7 @@ public class FlorDTO {
     }
     public void setPaisFlor(String paisFlor) {
         this.paisFlor = paisFlor;
+        setTipusFlor(paisFlor);
     }
     public String getTipusFlor() {
         return tipusFlor;
