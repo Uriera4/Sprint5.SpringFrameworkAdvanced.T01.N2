@@ -40,7 +40,6 @@ public class FlorService {
             FlorEntity flor = optionFlor.get();
             flor.setNomFlor(florDTO.getNomFlor());
             flor.setPaisFlor(florDTO.getPaisFlor());
-            florRepository.save(flor);
             return convertToFlorDTO(florRepository.save(convertToFlorEntity(florDTO)));
         } else {
             throw new FlorNotFoundException("Flor con ID: " + florDTO.getPk_FlorID() + ", no encontrada en la base de datos.");
